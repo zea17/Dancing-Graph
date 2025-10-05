@@ -76,6 +76,7 @@ public class Graph : MonoBehaviour
             FunctionLibrary.GetNextFunctionName(function) :
             FunctionLibrary.GetRandomFunctionNameOtherThan(function);
     }
+    
     void UpdateFunction()
     {
         FunctionLibrary.Function f = FunctionLibrary.GetFunction(function);
@@ -91,8 +92,7 @@ public class Graph : MonoBehaviour
                 v = (z + 0.5f) * step - 1f;
             }
             float u = (x + 0.5f) * step - 1f;
-            //float v = (z + 0.5f) * step - 1f;
-            points[i].localPosition = f(u, v, time);
+            points[i].localPosition = f(u, v, time) * 0.8f; // Scale down by 20%
         }
     }
 
@@ -114,10 +114,9 @@ public class Graph : MonoBehaviour
                 v = (z + 0.5f) * step - 1f;
             }
             float u = (x + 0.5f) * step - 1f;
-            //float v = (z + 0.5f) * step - 1f;
             points[i].localPosition = FunctionLibrary.Morph(
                  u, v, time, from, to, progress
-             );
+             ) * 0.8f; // Scale down by 20%
         }
     }
 

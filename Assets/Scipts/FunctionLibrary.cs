@@ -54,7 +54,7 @@ public static class FunctionLibrary
 		p.x = s * Sin(PI * u);
 		p.y = r * Sin(0.5f * PI * v);
 		p.z = s * Cos(PI * u);
-		return p;
+		return p * 0.8f; // Scale down to fit in grid
 	}
 
 	public static Vector3 Torus(float u, float v, float t)
@@ -66,7 +66,7 @@ public static class FunctionLibrary
 		p.x = s * Sin(PI * u);
 		p.y = r2 * Sin(PI * v);
 		p.z = s * Cos(PI * u);
-		return p;
+		return p * 0.8f; // Scale down to fit in grid
 	}
 	public static FunctionName GetNextFunctionName(FunctionName name)
 	{
