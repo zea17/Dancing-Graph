@@ -43,3 +43,4 @@
 *.mdb
 *.rsp
 *.bak
+.DS_Store
