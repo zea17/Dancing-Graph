@@ -16,7 +16,7 @@ A Unity project for visualizing mathematical functions and surfaces in real time
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/Graph.git
+   git clone https://github.com/zea17/Dancing-Graph.git
    ```
 2. **Open in Unity:**
    Open the project folder in Unity (tested with Unity 2021+).
@@ -43,7 +43,3 @@ Assets/
   Point/            # Point prefab and custom shader
 ```
 
-
----
-
-**Enjoy exploring mathematical surfaces in Unity!**
