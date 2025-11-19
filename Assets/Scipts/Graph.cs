@@ -7,8 +7,8 @@ public class Graph : MonoBehaviour
     [SerializeField]
     Transform pointPrefab;
 
-    [SerializeField, Range(10, 100)]
-    int resolution = 10;
+    [SerializeField, Range(10, 200)]
+    int resolution = 200;
 
     [SerializeField]
     FunctionLibrary.FunctionName function;
@@ -76,7 +76,7 @@ public class Graph : MonoBehaviour
             FunctionLibrary.GetNextFunctionName(function) :
             FunctionLibrary.GetRandomFunctionNameOtherThan(function);
     }
-    
+
     void UpdateFunction()
     {
         FunctionLibrary.Function f = FunctionLibrary.GetFunction(function);
