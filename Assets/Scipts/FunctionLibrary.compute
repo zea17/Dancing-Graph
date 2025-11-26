@@ -15,8 +15,19 @@ void SetPosition (uint3 id, float3 position) {
     }
 }
 [numthreads(8, 8, 1)]
+
+#define PI 3.14159265358979323846
+
+public float3 Wave(float u, float v, float t)
+	{
+		float3 p;
+		p.x = u;
+		p.y = sin(PI * (u + v + t));
+		p.z = v;
+		return p;
+}
 void FunctionKernel (unit3 id: Sv_DospatchThreadsID) {
     float2 uv = GetUV(id);
-    SetPosition(id, position);
+    SetPosition(id, Wave(uv.x, uv.y, _Time));
 
 }
