@@ -119,6 +119,4 @@ public class Graph : MonoBehaviour
              ) * 0.8f; // Scale down by 20%
         }
     }
-
-
 }
